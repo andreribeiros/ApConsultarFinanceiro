@@ -1,4 +1,4 @@
-package com.adsddm.consultarFinanceiro.config;
+package com.api.consultarFinanceiro.config;
 
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 import org.springframework.context.annotation.Bean;
@@ -24,7 +24,7 @@ public class SwaggerConfig {
     public Docket productApi() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.adsddm.consultarFinanceiro"))
+                .apis(RequestHandlerSelectors.basePackage("com.api.consultarFinanceiro"))
                 .paths(regex("/api.*"))
                 .build()
                 .apiInfo(metaInfo());
